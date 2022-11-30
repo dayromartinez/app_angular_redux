@@ -1,0 +1,17 @@
+<h3>Contador</h3>
+<h5>{{ contador }}</h5>
+
+<div class="row text-center">
+  <div class="col">
+    <button class="btn btn-danger" (click)="reset()">Resetear</button>
+  </div>
+</div>
+
+<div class="d-print-none">Screen Only (Hide on print only)</div>
+<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+
+
+<app-loader
+  [(showModal)]="showModal" [tipoModal]="tipoModal"
+></app-loader>

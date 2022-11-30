@@ -1,0 +1,25 @@
+
+<div id="backdrop" [ngClass]="{ block: showModal }">
+  <div
+    id="modal"
+    role="dialog"
+    (click)="closeModal($event)"
+  >
+    <div class="modal-dialog block" role="document">
+      <div class="modal-content modal-guardar">
+        <ng-container
+          *ngIf="tipoModal === tiposModal.loading; then modalLoading"
+        ></ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #modalLoading>
+  <div class="contenedor-loader">
+    <div class="spinner-border text-info" style="width: 11rem; height: 11rem;" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+</ng-template>
